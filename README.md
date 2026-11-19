@@ -1,55 +1,23 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/hero.svg" alt="saihroo — Software Engineer" width="100%" />
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/hero.gif" alt="saihroo — Software Engineer" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/saihroo">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=600&amp;size=20&amp;duration=2800&amp;pause=900&amp;color=22D3EE&amp;center=true&amp;vCenter=true&amp;width=720&amp;lines=Full-Stack+Developer;AI+%26+Automation;Android+%2F+Kotlin;Game+Dev+%C2%B7+Roblox;Building+KOMA+%E2%80%94+Manga+Motion+Studio" alt="Full-stack developer, AI and automation, Android and Kotlin, game dev with Roblox, building KOMA" />
-  </a>
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/typing.gif" alt="Software Engineer · Full-Stack Developer · AI + Automation · Android Developer · Game Developer" width="760" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/STATUS-BUILDING%20KOMA-22D3EE?style=for-the-badge&amp;labelColor=0D1117" alt="Currently building KOMA" />
-  <img src="https://img.shields.io/badge/OPEN%20TO-COLLABORATE-22D3EE?style=for-the-badge&amp;labelColor=0D1117" alt="Open to collaborate" />
+  <sub><b>EN</b> — Software Engineer. Full-stack, AI, mobile and game development.</sub><br />
+  <sub><b>ES</b> — Ingeniero de software. Full-stack, IA, móvil y desarrollo de juegos.</sub>
 </p>
 
 ---
 
-## `$ whoami`
+## `$ stack --list`
 
-I build complete products — web, mobile, desktop and games. I care about clean architecture, performance, and the small details that make software feel alive.
-
-Right now I'm building **KOMA**, a local-first manga motion studio, and prototyping **Hushmark**, a co-op horror game on Roblox.
-
-<sub><b>ES</b> — Construyo productos completos: web, móvil, escritorio y juegos. Me importan la arquitectura limpia, el rendimiento y esos detalles que hacen que el software se sienta vivo.</sub>
-
----
-
-## `$ cat now.txt`
-
-```yaml
-building:   KOMA — a local-first manga motion studio
-tinkering:  Saihroo — a terminal coding agent
-learning:   motion systems · local AI · Android
-open_to:    ambitious products & good collaborations
-```
-
-<sub><b>ES</b> — Construyendo KOMA, experimentando con Saihroo y abierto a productos ambiciosos y buenas colaboraciones.</sub>
-
----
-
-## `$ tree stack/`
-
-```txt
-saihroo@github:~$ tree stack/
-stack/
-├── web/        TypeScript · JavaScript · React · Next.js
-├── mobile/     Kotlin · Android
-├── backend/    C# · .NET · Node.js · MySQL · SQL Server
-├── ai/         Python · Ollama · OpenAI-compatible APIs
-├── gamedev/    Roblox · Luau · Rojo
-└── tools/      Git · GitHub · Linux · Electron · Vite
-```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/stack.gif" alt="TypeScript, JavaScript, React, Kotlin, Android, Python, AI, C#, .NET, SQL, Roblox, Luau, Git, GitHub and Linux" width="880" />
+</p>
 
 <p align="center">
   <picture>
@@ -61,53 +29,8 @@ stack/
 
 ---
 
-## `$ ls projects/`
-
-### 01 · Saihroo
-**Terminal coding agent** · `Node.js` `DeepSeek` `NVIDIA API` `CLI`
-
-A hackable terminal agent that reads files, edits code, runs PowerShell, searches the web, keeps todo lists and resumes sessions. Single Node.js package, zero runtime dependencies.
-
-### 02 · KOMA
-**Manga motion studio** · `Electron` `JavaScript` `Local AI` `Windows`
-
-Turns manga panels into motion comics: camera moves, parallax, character rigging, particles and beat-synced music. Everything runs locally; AI direction is optional through Ollama or any OpenAI-compatible API.
-
-### 03 · Hushmark
-**Co-op horror game** · `Roblox` `Luau` `Rojo`
-
-A 1–4 player survival experience where the monster steals your voice and noise is the core resource. Built with a networked module architecture, rate limiting and server-side validation.
-
-### 04 · Mediscan
-**Medical appointment platform** · `C#` `.NET` `SQL`
-
-Scheduling, role-based access and a clean domain model designed to keep clinic workflows simple.
-
-<sub>Most of this work lives in private repositories. <a href="https://github.com/saihroo?tab=repositories">Browse public repositories →</a> or ask me for a walkthrough.</sub>
-
-<sub><b>ES</b> — La mayoría de estos proyectos están en repositorios privados. Con gusto te cuento la arquitectura, las decisiones o te muestro una demo.</sub>
-
----
-
-## `$ contact --now`
-
-Have an idea, a product to build, or a codebase that needs a second pair of eyes? My inbox is open.
-
-<sub><b>ES</b> — ¿Tienes una idea, un producto que construir o un proyecto que necesita otra mirada? Escríbeme.</sub>
-
 <p align="center">
-  <a href="mailto:samuelisaachuembes@gmail.com">
-    <img src="https://img.shields.io/badge/EMAIL-samuelisaachuembes%40gmail.com-22D3EE?style=for-the-badge&amp;logo=gmail&amp;logoColor=white&amp;labelColor=0D1117" alt="Send me an email" />
-  </a>
-  <a href="https://github.com/saihroo">
-    <img src="https://img.shields.io/badge/GITHUB-saihroo-22D3EE?style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;labelColor=0D1117" alt="My GitHub profile" />
-  </a>
-</p>
-
----
-
-<p align="center">
-  <sub><i>“Simplicity is prerequisite for reliability.” — Edsger W. Dijkstra</i></sub>
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/chainsaw.gif" alt="Animated pixel art of Chainsaw Man on loop" width="190" />
   <br />
-  <sub>Designed &amp; built by saihroo · <code>main</code></sub>
+  <sub>idle loop · chainsaw man</sub>
 </p>
