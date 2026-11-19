@@ -11,7 +11,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/STATUS-BUILDING%20KOMA-22D3EE?style=for-the-badge&amp;labelColor=0D1117" alt="Currently building KOMA" />
   <img src="https://img.shields.io/badge/OPEN%20TO-COLLABORATE-22D3EE?style=for-the-badge&amp;labelColor=0D1117" alt="Open to collaborate" />
-  <img src="https://img.shields.io/badge/FOCUS-FULL--STACK%20%C2%B7%20AI-22D3EE?style=for-the-badge&amp;labelColor=0D1117" alt="Focus: full-stack and AI" />
 </p>
 
 ---
