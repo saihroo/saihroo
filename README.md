@@ -9,7 +9,6 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=saihroo&amp;label=PROFILE+VIEWS&amp;color=22D3EE&amp;style=for-the-badge" alt="Profile views" />
   <img src="https://img.shields.io/badge/STATUS-BUILDING%20KOMA-22D3EE?style=for-the-badge&amp;labelColor=0D1117" alt="Currently building KOMA" />
   <img src="https://img.shields.io/badge/OPEN%20TO-COLLABORATE-22D3EE?style=for-the-badge&amp;labelColor=0D1117" alt="Open to collaborate" />
   <img src="https://img.shields.io/badge/FOCUS-FULL--STACK%20%C2%B7%20AI-22D3EE?style=for-the-badge&amp;labelColor=0D1117" alt="Focus: full-stack and AI" />
@@ -85,7 +84,7 @@ A 1–4 player survival experience where the monster steals your voice and noise
 
 Scheduling, role-based access and a clean domain model designed to keep clinic workflows simple.
 
-<sub>Most of this work lives in private repositories. Happy to walk through the architecture, the decisions or a live demo on request.</sub>
+<sub>Most of this work lives in private repositories. <a href="https://github.com/saihroo?tab=repositories">Browse public repositories →</a> or ask me for a walkthrough.</sub>
 
 <sub><b>ES</b> — La mayoría de estos proyectos están en repositorios privados. Con gusto te cuento la arquitectura, las decisiones o te muestro una demo.</sub>
 
