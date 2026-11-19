@@ -114,9 +114,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/saihroo/saihroo/output/snake-dark.svg?v=3" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/saihroo/saihroo/output/snake-light.svg?v=3" />
-    <img src="https://raw.githubusercontent.com/saihroo/saihroo/output/snake-dark.svg?v=3" width="100%" alt="Animated snake travelling through the GitHub contribution graph" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/saihroo/saihroo/refs/heads/output/snake-dark.svg?v=3" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/saihroo/saihroo/refs/heads/output/snake-light.svg?v=3" />
+    <img src="https://raw.githubusercontent.com/saihroo/saihroo/refs/heads/output/snake-dark.svg?v=3" width="100%" alt="Animated snake travelling through the GitHub contribution graph" />
   </picture>
 </p>
 
