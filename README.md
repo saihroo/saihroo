@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/hero.gif?v=4" width="100%" alt="saihroo — Software Engineer" />
+<img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/hero.webp?v=1" width="100%" alt="saihroo — Software Engineer" />
 
 <a href="https://github.com/saihroo">
-  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/typing.gif?v=3" width="760" alt="Software Engineer · Full-Stack Developer · AI + Automation · Android Developer · Game Developer" />
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/typing.webp?v=1" width="760" alt="Software Engineer · Full-Stack Developer · AI + Automation · Android Developer · Game Developer" />
 </a>
 
 <br />
@@ -123,6 +123,12 @@
 <p align="center"><sub><code>contribution graph · snake loop</code></sub></p>
 
 ---
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/chainsaw.webp?v=1" width="140" alt="Denji from Chainsaw Man in a looping pixel-art animation" />
+  <br />
+  <sub><code>idle loop · 0x1F</code></sub>
+</p>
 
 <p align="center">
   <sub><code>saihroo · software engineer · 2026</code></sub>
