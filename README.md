@@ -131,5 +131,5 @@
 </p>
 
 <p align="center">
-  <sub><code>saihroo · software engineer · 2026</code></sub>
+  <sub><code>
 </p>
