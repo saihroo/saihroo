@@ -91,20 +91,6 @@ Scheduling, role-based access and a clean domain model designed to keep clinic w
 
 ---
 
-## `$ git log --graph`
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/saihroo/saihroo/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/saihroo/saihroo/output/github-snake.svg" />
-    <img src="https://raw.githubusercontent.com/saihroo/saihroo/output/github-snake-dark.svg" alt="Animated snake eating my GitHub contribution graph" width="100%" />
-  </picture>
-  <br />
-  <sub>Auto-generated every day from my contribution graph · <a href="https://github.com/saihroo?tab=repositories">browse repositories →</a></sub>
-</p>
-
----
-
 ## `$ contact --now`
 
 Have an idea, a product to build, or a codebase that needs a second pair of eyes? My inbox is open.
