@@ -311,15 +311,24 @@ def build_typing():
     prompt_right = 18 + draw.textlength("saihroo@github:~$", font=prompt_font)
     text_x = prompt_right + 14
 
-    states = []
-    for role in ROLES:
-        for i in range(len(role) + 1):
-            states.append((role[:i], True))
-        for i in range(10):
-            states.append((role, (i // 5) % 2 == 0))
-        for i in range(len(role) - 2, -1, -2):
-            states.append((role[:i], True))
-    states.append(("", True))
+    def typed(role):
+        return [(role[:i], True) for i in range(len(role) + 1)]
+
+    def hold(role):
+        return [(role, (i // 5) % 2 == 0) for i in range(10)]
+
+    def erased(role):
+        states = [(role[:i], True) for i in range(len(role) - 2, -1, -2)]
+        states.append(("", True))
+        return states
+
+    states = hold(ROLES[0])
+    for i in range(1, len(ROLES)):
+        states += erased(ROLES[i - 1])
+        states += typed(ROLES[i])
+        states += hold(ROLES[i])
+    states += erased(ROLES[-1])
+    states += typed(ROLES[0])
 
     frames = []
     for text, cursor_on in states:
