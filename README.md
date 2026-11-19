@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/hero.gif" alt="saihroo — Software Engineer" width="100%" />
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/hero.gif?v=2" alt="saihroo — Software Engineer" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/typing.gif" alt="Software Engineer · Full-Stack Developer · AI + Automation · Android Developer · Game Developer" width="760" />
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/typing.gif?v=2" alt="Software Engineer · Full-Stack Developer · AI + Automation · Android Developer · Game Developer" width="760" />
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 ## `$ stack --list`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/stack.gif" alt="TypeScript, JavaScript, React, Kotlin, Android, Python, AI, C#, .NET, SQL, Roblox, Luau, Git, GitHub and Linux" width="880" />
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/stack.gif?v=2" alt="TypeScript, JavaScript, React, Kotlin, Android, Python, AI, C#, .NET, SQL, Roblox, Luau, Git, GitHub and Linux" width="880" />
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/chainsaw.gif" alt="Animated pixel art of Chainsaw Man on loop" width="190" />
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/chainsaw.gif?v=2" alt="Animated pixel art of Chainsaw Man on loop" width="190" />
   <br />
   <sub>idle loop · chainsaw man</sub>
 </p>
