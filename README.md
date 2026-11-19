@@ -21,9 +21,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts%2Cjs%2Creact%2Cnextjs%2Cnodejs%2Ckotlin%2Candroidstudio%2Cpython%2Ccs%2Cdotnet%2Cmysql%2Cgit%2Cgithub%2Clinux%2Clua%2Celectron%2Cvite&amp;theme=dark&amp;perline=9" />
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts%2Cjs%2Creact%2Cnextjs%2Cnodejs%2Ckotlin%2Candroidstudio%2Cpython%2Ccs%2Cdotnet%2Cmysql%2Cgit%2Cgithub%2Clinux%2Clua%2Celectron%2Cvite&amp;theme=light&amp;perline=9" />
-    <img src="https://skillicons.dev/icons?i=ts%2Cjs%2Creact%2Cnextjs%2Cnodejs%2Ckotlin%2Candroidstudio%2Cpython%2Ccs%2Cdotnet%2Cmysql%2Cgit%2Cgithub%2Clinux%2Clua%2Celectron%2Cvite&amp;theme=dark&amp;perline=9" alt="TypeScript, JavaScript, React, Next.js, Node.js, Kotlin, Android Studio, Python, C#, .NET, MySQL, Git, GitHub, Linux, Lua, Electron and Vite" width="520" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts%2Cjs%2Creact%2Ckotlin%2Candroidstudio%2Cpython%2Ccs%2Cdotnet%2Cmysql%2Clua%2Cgit%2Cgithub%2Clinux&amp;theme=dark&amp;perline=13" />
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts%2Cjs%2Creact%2Ckotlin%2Candroidstudio%2Cpython%2Ccs%2Cdotnet%2Cmysql%2Clua%2Cgit%2Cgithub%2Clinux&amp;theme=light&amp;perline=13" />
+    <img src="https://skillicons.dev/icons?i=ts%2Cjs%2Creact%2Ckotlin%2Candroidstudio%2Cpython%2Ccs%2Cdotnet%2Cmysql%2Clua%2Cgit%2Cgithub%2Clinux&amp;theme=dark&amp;perline=13" alt="TypeScript, JavaScript, React, Kotlin, Android Studio, Python, C#, .NET, MySQL, Lua, Git, GitHub and Linux" width="720" />
   </picture>
 </p>
 
