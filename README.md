@@ -125,7 +125,7 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/chainsaw.webp?v=1" width="140" alt="Denji from Chainsaw Man in a looping pixel-art animation" />
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/chainsaw.webp?v=2" width="160" alt="Denji from Chainsaw Man in a looping pixel-art animation" />
   <br />
   <sub><code>idle loop · 0x1F</code></sub>
 </p>
