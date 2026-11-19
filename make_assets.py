@@ -159,7 +159,7 @@ def build_avatar(size=204, pixels=102):
 # Hero banner
 # ---------------------------------------------------------------------------
 
-HERO_W, HERO_H = 1000, 300
+HERO_W, HERO_H = 900, 300
 HERO_FRAMES = 24
 HERO_MS = 100
 
@@ -168,9 +168,9 @@ def build_hero():
     name_font = font(FONT_BOLD, 74)
     prompt_font = font(FONT_BOLD, 13)
     meta_font = font(FONT_REG, 12)
-    role_font = font(FONT_BOLD, 15)
-    desc_font = font(FONT_REG, 14)
-    status_font = font(FONT_REG, 12)
+    role_font = font(FONT_BOLD, 24)
+    desc_font = font(FONT_REG, 21)
+    status_font = font(FONT_REG, 17)
 
     card = vertical_gradient((HERO_W, HERO_H), BG_TOP, BG_BOTTOM).convert("RGBA")
     draw = ImageDraw.Draw(card)
@@ -221,37 +221,37 @@ def build_hero():
     name_glow_mask = name_mask.filter(ImageFilter.GaussianBlur(14))
 
     # copy
-    draw.text((36, 181), "SOFTWARE ENGINEER", font=role_font, fill=CYAN_LIGHT)
+    draw.text((36, 174), "SOFTWARE ENGINEER", font=role_font, fill=CYAN_LIGHT)
     draw.text(
-        (37, 207),
-        "Full-Stack  ·  AI + Automation  ·  Android  ·  Game Dev",
+        (37, 206),
+        "Full-Stack · AI · Android · Game Dev",
         font=desc_font,
         fill=(148, 163, 184),
     )
-    draw.line([(36, 232), (560, 232)], fill=(34, 211, 238, 35))
-    draw.text((38, 248), ">", font=status_font, fill=CYAN)
-    draw.text((52, 248), "stack", font=status_font, fill=SLATE_DARK)
+    draw.line([(36, 238), (540, 238)], fill=(34, 211, 238, 35))
+    draw.text((38, 252), ">", font=status_font, fill=CYAN)
+    draw.text((53, 252), "stack", font=status_font, fill=SLATE_DARK)
     draw.text(
-        (92, 248),
+        (106, 252),
         "TypeScript · Kotlin · Python · C# · Luau",
         font=status_font,
         fill=(203, 213, 225),
     )
 
     # decorative bits
-    draw.text((636, 82), "{ }", font=font(FONT_BOLD, 18), fill=(103, 232, 249, 120))
-    draw.text((648, 214), "=>", font=font(FONT_BOLD, 15), fill=(129, 140, 248, 110))
-    draw.text((660, 250), "0x1F", font=font(FONT_REG, 11), fill=(100, 116, 139, 130))
+    draw.text((568, 84), "{ }", font=font(FONT_BOLD, 18), fill=(103, 232, 249, 120))
+    draw.text((580, 214), "=>", font=font(FONT_BOLD, 15), fill=(129, 140, 248, 110))
+    draw.text((592, 250), "0x1F", font=font(FONT_REG, 11), fill=(100, 116, 139, 130))
     draw.text(
         (HERO_W - 32, 270),
         "locale: en / es",
-        font=font(FONT_REG, 10),
+        font=font(FONT_REG, 12),
         fill=(71, 85, 105),
         anchor="ra",
     )
 
     # avatar
-    cx, cy = 842, 168
+    cx, cy = 752, 168
     avatar, avatar_mask = build_avatar()
     ax, ay = cx - avatar.width // 2, cy - avatar.height // 2
 
@@ -280,13 +280,13 @@ def build_hero():
     rd.text(
         (cx - 120, cy - 108),
         "ID 00",
-        font=font(FONT_REG, 10),
+        font=font(FONT_REG, 12),
         fill=(100, 116, 139, 190),
     )
     rd.text(
         (cx + 120, cy - 108),
         "● ONLINE",
-        font=font(FONT_REG, 10),
+        font=font(FONT_REG, 12),
         fill=CYAN + (170,),
         anchor="ra",
     )
@@ -402,18 +402,19 @@ def build_hero():
 # Whoami card
 # ---------------------------------------------------------------------------
 
-WHO_W, WHO_H = 1000, 300
+WHO_W, WHO_H = 900, 336
 
 
 def build_whoami():
-    prompt_font = font(FONT_BOLD, 12)
-    name_font = font(FONT_BOLD, 44)
-    role_font = font(FONT_BOLD, 14)
-    body_font = font(FONT_REG, 14)
-    tag_font = font(FONT_BOLD, 12)
-    meta_font = font(FONT_REG, 11)
-    focus_font = font(FONT_REG, 12)
-    label_font = font(FONT_BOLD, 10)
+    prompt_font = font(FONT_BOLD, 15)
+    name_font = font(FONT_BOLD, 54)
+    role_font = font(FONT_BOLD, 22)
+    sub_font = font(FONT_REG, 15)
+    body_font = font(FONT_REG, 20)
+    tag_font = font(FONT_BOLD, 13)
+    meta_font = font(FONT_REG, 12)
+    focus_font = font(FONT_REG, 17)
+    label_font = font(FONT_BOLD, 12)
 
     img = Image.new("RGBA", (WHO_W, WHO_H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
@@ -431,113 +432,107 @@ def build_whoami():
         outline=(21, 94, 117, 90),
         width=1,
     )
-    draw.line([(8, 45), (WHO_W - 9, 45)], fill=(22, 78, 99, 180))
+    draw.line([(8, 46), (WHO_W - 9, 46)], fill=(22, 78, 99, 180))
 
     for cx, color in ((26, (255, 95, 87)), (44, (254, 188, 46)), (62, (40, 200, 64))):
-        draw.ellipse([cx - 4, 18, cx + 4, 26], fill=color)
+        draw.ellipse([cx - 4, 17, cx + 4, 25], fill=color)
     draw.text(
-        (WHO_W / 2, 22),
+        (WHO_W / 2, 21),
         "saihroo@github: ~/whoami",
         font=meta_font,
         fill=(100, 116, 139),
         anchor="ma",
     )
-    draw.text((WHO_W - 26, 22), "zsh", font=meta_font, fill=(71, 85, 105), anchor="ra")
+    draw.text((WHO_W - 26, 21), "zsh", font=meta_font, fill=(71, 85, 105), anchor="ra")
 
     # accent rail
-    draw.rounded_rectangle([0, 66, 3, 246], radius=2, fill=CYAN + (200,))
+    draw.rounded_rectangle([0, 64, 3, 296], radius=2, fill=CYAN + (200,))
 
     # prompt
-    draw.text((28, 58), "saihroo@github", font=prompt_font, fill=CYAN)
+    draw.text((30, 56), "saihroo@github", font=prompt_font, fill=CYAN)
     prompt_w = draw.textlength("saihroo@github", font=prompt_font)
-    draw.text((28 + prompt_w, 58), ":~$", font=prompt_font, fill=SLATE)
-    cmd_x = 28 + prompt_w + draw.textlength(":~$", font=prompt_font) + 8
-    draw.text((cmd_x, 58), "whoami", font=prompt_font, fill=TEXT)
+    draw.text((30 + prompt_w, 56), ":~$", font=prompt_font, fill=SLATE)
+    cmd_x = 30 + prompt_w + draw.textlength(":~$", font=prompt_font) + 9
+    draw.text((cmd_x, 56), "whoami", font=prompt_font, fill=TEXT)
 
     # name
-    name_mask = text_mask((WHO_W, WHO_H), (27, 76), "saihroo", name_font)
+    name_mask = text_mask((WHO_W, WHO_H), (29, 76), "saihroo", name_font)
     name_grad = gradient_fill((WHO_W, WHO_H), [CYAN_LIGHT, CYAN, CYAN_MID])
-    name_glow = name_mask.filter(ImageFilter.GaussianBlur(10))
+    name_glow = name_mask.filter(ImageFilter.GaussianBlur(12))
     glow_color = Image.new("RGBA", img.size, CYAN + (255,))
-    glow_color.putalpha(name_glow.point(lambda v: int(v * 0.32)))
+    glow_color.putalpha(name_glow.point(lambda v: int(v * 0.34)))
     img.alpha_composite(glow_color)
     img.paste(name_grad, (0, 0), name_mask)
 
-    # role
-    draw.text((30, 138), "SOFTWARE ENGINEER", font=role_font, fill=CYAN_LIGHT)
+    # role + subtitle
+    draw.text((31, 146), "SOFTWARE ENGINEER", font=role_font, fill=CYAN_LIGHT)
     role_w = draw.textlength("SOFTWARE ENGINEER", font=role_font)
     draw.text(
-        (30 + role_w + 14, 139),
+        (31 + role_w + 16, 151),
         "// full-stack · ai · mobile · games",
-        font=meta_font,
+        font=sub_font,
         fill=SLATE,
     )
-    draw.line([(28, 164), (972, 164)], fill=(34, 211, 238, 40))
+    draw.line([(30, 178), (612, 178)], fill=(34, 211, 238, 45))
 
     # bilingual bio
-    draw.text((30, 180), "EN", font=tag_font, fill=CYAN)
+    draw.text((31, 192), "EN", font=tag_font, fill=CYAN)
     draw.text(
-        (62, 176),
-        "Software engineer: full-stack products, AI automation,",
+        (72, 188),
+        "Software engineer: full-stack products,",
         font=body_font,
         fill=(203, 213, 225),
     )
     draw.text(
-        (62, 194),
-        "Android apps and games.",
+        (72, 212),
+        "AI automation, Android apps and games.",
         font=body_font,
         fill=(203, 213, 225),
     )
-    draw.text((30, 220), "ES", font=tag_font, fill=CYAN)
+    draw.text((31, 246), "ES", font=tag_font, fill=CYAN)
     draw.text(
-        (62, 218),
-        "Ingeniero de software: productos full-stack, IA,",
+        (72, 242),
+        "Ingeniero de software: full-stack,",
         font=body_font,
         fill=(203, 213, 225),
     )
     draw.text(
-        (62, 236),
-        "apps Android y videojuegos.",
+        (72, 266),
+        "IA, apps Android y videojuegos.",
         font=body_font,
         fill=(203, 213, 225),
     )
 
     # focus panel
     draw.rounded_rectangle(
-        [704, 70, 970, 248],
-        radius=10,
+        [640, 64, 872, 296],
+        radius=12,
         fill=(5, 14, 24, 255),
         outline=(21, 94, 117, 150),
         width=1,
     )
-    draw.text((720, 82), "FOCUS", font=label_font, fill=CYAN)
-    draw.line([(720, 98), (954, 98)], fill=(21, 94, 117, 150))
+    draw.text((656, 78), "FOCUS", font=label_font, fill=CYAN)
+    draw.line([(656, 96), (856, 96)], fill=(21, 94, 117, 150))
     focus = ["full-stack", "ai + automation", "android", "game dev"]
     for i, item in enumerate(focus):
-        y = 112 + i * 24
+        y = 110 + i * 34
         draw.polygon(
-            [(720, y + 5), (725, y), (730, y + 5), (725, y + 10)],
+            [(656, y + 6), (662, y), (668, y + 6), (662, y + 12)],
             fill=CYAN + (210,),
         )
-        draw.text((740, y), item, font=focus_font, fill=(203, 213, 225))
-    draw.line([(720, 202), (954, 202)], fill=(21, 94, 117, 150))
-    draw.text((720, 212), "STATUS", font=label_font, fill=SLATE)
-    draw.text(
-        (954, 212),
-        "● ONLINE",
-        font=label_font,
-        fill=CYAN,
-        anchor="ra",
-    )
-    draw.text((720, 230), "LOCALE", font=label_font, fill=SLATE)
-    draw.text((954, 230), "EN · ES", font=label_font, fill=(203, 213, 225), anchor="ra")
+        draw.text((676, y - 2), item, font=focus_font, fill=(203, 213, 225))
+    draw.line([(656, 244), (856, 244)], fill=(21, 94, 117, 150))
+    draw.text((656, 252), "STATUS", font=label_font, fill=SLATE)
+    draw.text((856, 252), "● ONLINE", font=label_font, fill=CYAN, anchor="ra")
+    draw.text((656, 272), "LOCALE", font=label_font, fill=SLATE)
+    draw.text((856, 272), "EN · ES", font=label_font, fill=(203, 213, 225), anchor="ra")
 
     # footer prompt
-    draw.line([(24, 260), (976, 260)], fill=(34, 211, 238, 30))
-    draw.text((30, 271), "saihroo@github:~$", font=meta_font, fill=SLATE)
+    draw.line([(24, 306), (876, 306)], fill=(34, 211, 238, 30))
+    draw.text((30, 312), "saihroo@github:~$", font=meta_font, fill=SLATE)
     foot_w = draw.textlength("saihroo@github:~$", font=meta_font)
-    draw.rectangle([30 + foot_w + 8, 269, 30 + foot_w + 16, 283], fill=CYAN)
-    draw.text((970, 272), "0x1F", font=meta_font, fill=(71, 85, 105), anchor="ra")
+    draw.rectangle([30 + foot_w + 8, 310, 30 + foot_w + 16, 324], fill=CYAN)
+    draw.text((870, 313), "0x1F", font=meta_font, fill=(71, 85, 105), anchor="ra")
 
     out = os.path.join(ASSETS, "whoami.png")
     img.save(out, optimize=True)

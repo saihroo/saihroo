@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/hero.gif?v=3" width="100%" alt="saihroo — Software Engineer" />
+<img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/hero.gif?v=4" width="100%" alt="saihroo — Software Engineer" />
 
 <a href="https://github.com/saihroo">
   <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/typing.gif?v=3" width="760" alt="Software Engineer · Full-Stack Developer · AI + Automation · Android Developer · Game Developer" />
@@ -22,7 +22,7 @@
 ## `$ whoami`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/whoami.png?v=1" width="100%" alt="Terminal card with the profile of saihroo, Software Engineer. EN: full-stack products, AI automation, Android apps and games. ES: productos full-stack, IA, apps Android y videojuegos." />
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/whoami.png?v=2" width="100%" alt="Terminal card with the profile of saihroo, Software Engineer. EN: full-stack products, AI automation, Android apps and games. ES: productos full-stack, IA, apps Android y videojuegos." />
 </p>
 
 ---
