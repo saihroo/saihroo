@@ -416,9 +416,10 @@ def build_whoami():
     focus_font = font(FONT_REG, 17)
     label_font = font(FONT_BOLD, 12)
 
-    img = Image.new("RGBA", (WHO_W, WHO_H), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(img)
+    base = Image.new("RGBA", (WHO_W, WHO_H), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(base)
 
+    # card shell
     draw.rounded_rectangle(
         [0, 0, WHO_W - 1, WHO_H - 1],
         radius=18,
@@ -432,8 +433,8 @@ def build_whoami():
         outline=(21, 94, 117, 90),
         width=1,
     )
-    draw.line([(8, 46), (WHO_W - 9, 46)], fill=(22, 78, 99, 180))
 
+    # window chrome, no separator line
     for cx, color in ((26, (255, 95, 87)), (44, (254, 188, 46)), (62, (40, 200, 64))):
         draw.ellipse([cx - 4, 17, cx + 4, 25], fill=color)
     draw.text(
@@ -459,10 +460,10 @@ def build_whoami():
     name_mask = text_mask((WHO_W, WHO_H), (29, 76), "saihroo", name_font)
     name_grad = gradient_fill((WHO_W, WHO_H), [CYAN_LIGHT, CYAN, CYAN_MID])
     name_glow = name_mask.filter(ImageFilter.GaussianBlur(12))
-    glow_color = Image.new("RGBA", img.size, CYAN + (255,))
+    glow_color = Image.new("RGBA", base.size, CYAN + (255,))
     glow_color.putalpha(name_glow.point(lambda v: int(v * 0.34)))
-    img.alpha_composite(glow_color)
-    img.paste(name_grad, (0, 0), name_mask)
+    base.alpha_composite(glow_color)
+    base.paste(name_grad, (0, 0), name_mask)
 
     # role + subtitle
     draw.text((31, 146), "SOFTWARE ENGINEER", font=role_font, fill=CYAN_LIGHT)
@@ -473,7 +474,6 @@ def build_whoami():
         font=sub_font,
         fill=SLATE,
     )
-    draw.line([(30, 178), (612, 178)], fill=(34, 211, 238, 45))
 
     # bilingual bio
     draw.text((31, 192), "EN", font=tag_font, fill=CYAN)
@@ -503,7 +503,7 @@ def build_whoami():
         fill=(203, 213, 225),
     )
 
-    # focus panel
+    # focus panel, no internal rules
     draw.rounded_rectangle(
         [640, 64, 872, 296],
         radius=12,
@@ -512,7 +512,6 @@ def build_whoami():
         width=1,
     )
     draw.text((656, 78), "FOCUS", font=label_font, fill=CYAN)
-    draw.line([(656, 96), (856, 96)], fill=(21, 94, 117, 150))
     focus = ["full-stack", "ai + automation", "android", "game dev"]
     for i, item in enumerate(focus):
         y = 110 + i * 34
@@ -521,22 +520,97 @@ def build_whoami():
             fill=CYAN + (210,),
         )
         draw.text((676, y - 2), item, font=focus_font, fill=(203, 213, 225))
-    draw.line([(656, 244), (856, 244)], fill=(21, 94, 117, 150))
     draw.text((656, 252), "STATUS", font=label_font, fill=SLATE)
     draw.text((856, 252), "● ONLINE", font=label_font, fill=CYAN, anchor="ra")
     draw.text((656, 272), "LOCALE", font=label_font, fill=SLATE)
     draw.text((856, 272), "EN · ES", font=label_font, fill=(203, 213, 225), anchor="ra")
 
-    # footer prompt
-    draw.line([(24, 306), (876, 306)], fill=(34, 211, 238, 30))
+    # footer prompt, no separator line
     draw.text((30, 312), "saihroo@github:~$", font=meta_font, fill=SLATE)
     foot_w = draw.textlength("saihroo@github:~$", font=meta_font)
-    draw.rectangle([30 + foot_w + 8, 310, 30 + foot_w + 16, 324], fill=CYAN)
-    draw.text((870, 313), "0x1F", font=meta_font, fill=(71, 85, 105), anchor="ra")
+    cursor_box = [30 + foot_w + 8, 310, 30 + foot_w + 16, 324]
+    draw.rectangle(cursor_box, fill=CYAN)
 
-    out = os.path.join(ASSETS, "whoami.png")
-    img.save(out, optimize=True)
-    print("whoami.png", os.path.getsize(out), "bytes")
+    # 30-frame loop: scanline, focus pulse, online glow, name pulse, cursor blink
+    n = 30
+    frames = []
+    for i in range(n):
+        t = i / n
+        phase = 2 * math.pi * t
+        img = base.copy()
+        d = ImageDraw.Draw(img)
+
+        # soft scanline
+        scan_y = int(48 + t * (WHO_H - 80))
+        fade = math.sin(math.pi * t) ** 1.2
+        if fade > 0.02:
+            scan = Image.new("RGBA", img.size, (0, 0, 0, 0))
+            sd = ImageDraw.Draw(scan)
+            sd.rectangle([0, scan_y, WHO_W, scan_y + 1], fill=CYAN + (int(34 * fade),))
+            scan = scan.filter(ImageFilter.GaussianBlur(3))
+            img.alpha_composite(scan)
+
+        # focus bullets pulse
+        for j, _ in enumerate(focus):
+            y = 110 + j * 34
+            pulse = 0.5 + 0.5 * math.sin(phase - j * 0.9)
+            glow = Image.new("RGBA", img.size, (0, 0, 0, 0))
+            gd = ImageDraw.Draw(glow)
+            gd.ellipse(
+                [662 - 9, y + 6 - 9, 662 + 9, y + 6 + 9],
+                fill=CYAN + (int(40 * pulse),),
+            )
+            glow = glow.filter(ImageFilter.GaussianBlur(5))
+            img.alpha_composite(glow)
+            d.polygon(
+                [(656, y + 6), (662, y), (668, y + 6), (662, y + 12)],
+                fill=CYAN + (int(110 + 120 * pulse),),
+            )
+
+        # online dot glow
+        online_pulse = 0.5 + 0.5 * math.sin(phase * 2)
+        text_w = d.textlength("● ONLINE", font=label_font)
+        dot_x = 856 - text_w + 4
+        glow = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        gd = ImageDraw.Draw(glow)
+        gd.ellipse(
+            [dot_x - 7, 253, dot_x + 7, 267],
+            fill=CYAN + (int(50 * online_pulse),),
+        )
+        glow = glow.filter(ImageFilter.GaussianBlur(4))
+        img.alpha_composite(glow)
+
+        # name glow pulse
+        name_alpha = int(26 + 22 * (0.5 + 0.5 * math.sin(phase)))
+        glow = Image.new("RGBA", img.size, CYAN + (255,))
+        glow.putalpha(
+            name_mask.filter(ImageFilter.GaussianBlur(14)).point(
+                lambda v: int(v * name_alpha / 255)
+            )
+        )
+        img.alpha_composite(glow)
+
+        # cursor blink
+        if (i // 15) % 2 == 1:
+            d.rectangle(cursor_box, fill=(4, 10, 18, 255))
+
+        frames.append(img)
+
+    out_png = os.path.join(ASSETS, "whoami.png")
+    base.save(out_png, optimize=True)
+    print("whoami.png", os.path.getsize(out_png), "bytes")
+
+    out_webp = os.path.join(ASSETS, "whoami.webp")
+    frames[0].save(
+        out_webp,
+        save_all=True,
+        append_images=frames[1:],
+        duration=90,
+        loop=0,
+        quality=88,
+        method=6,
+    )
+    print("whoami.webp", os.path.getsize(out_webp), "bytes", len(frames), "frames")
 
 
 # ---------------------------------------------------------------------------
@@ -643,7 +717,6 @@ def build_ticker():
         outline=(34, 211, 238, 105),
         width=1,
     )
-    draw.line([(14, 28), (STACK_W - 15, 28)], fill=(22, 78, 99, 130))
     draw.text((18, 9), "stack --list", font=label_font, fill=SLATE)
     draw.text((STACK_W - 18, 9), "live", font=label_font, fill=(34, 211, 238, 160), anchor="ra")
 
@@ -677,6 +750,7 @@ def build_ticker():
     fade = fade_edges((STACK_W, 40), fade=100)
 
     frames = []
+    webp_frames = []
     for f in range(n):
         img = base.copy()
         off1 = (f * step1) % p1.width
@@ -699,6 +773,7 @@ def build_ticker():
         img.alpha_composite(layer2, (0, 60))
 
         frames.append(palette(img, 64))
+        webp_frames.append(img)
 
     out = os.path.join(ASSETS, "stack.gif")
     frames[0].save(
@@ -711,6 +786,18 @@ def build_ticker():
         disposal=2,
     )
     print("stack.gif", os.path.getsize(out), "bytes", n, "frames")
+
+    out_webp = os.path.join(ASSETS, "stack.webp")
+    webp_frames[0].save(
+        out_webp,
+        save_all=True,
+        append_images=webp_frames[1:],
+        duration=STACK_MS,
+        loop=0,
+        quality=88,
+        method=6,
+    )
+    print("stack.webp", os.path.getsize(out_webp), "bytes", n, "frames")
 
 
 # ---------------------------------------------------------------------------
@@ -744,4 +831,5 @@ if __name__ == "__main__":
     build_hero()
     build_whoami()
     build_typing()
+    build_ticker()
     build_chainsaw()

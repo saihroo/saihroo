@@ -17,100 +17,25 @@
 
 </div>
 
----
-
-## `$ whoami`
+### `$ whoami`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/whoami.png?v=2" width="100%" alt="Terminal card with the profile of saihroo, Software Engineer. EN: Software engineer: full-stack products, AI automation, Android apps and games. ES: Ingeniero de software: full-stack, IA, apps Android y videojuegos." />
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/whoami.webp?v=3" width="100%" alt="Animated terminal card with the profile of saihroo, Software Engineer. EN: Software engineer: full-stack products, AI automation, Android apps and games. ES: Ingeniero de software: full-stack, IA, apps Android y videojuegos." />
 </p>
 
----
+### `$ stack --list`
 
-<div align="center">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/stack.webp?v=1" width="100%" alt="Animated ticker cycling through the tech stack: TypeScript, JavaScript, React, Kotlin, Android, Python, AI, C#, .NET, SQL, Roblox, Luau, Git, GitHub and Linux" />
+</p>
 
-## `$ stack --list`
-
-<table cellpadding="14">
-  <thead>
-    <tr>
-      <th colspan="2" align="left"><code>saihroo@github:~$ cat tech-stack.yaml</code></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top">
-        <code>├─ 01 frontend</code><br /><br />
-        <img src="https://cdn.simpleicons.org/typescript/22d3ee" width="40" height="40" alt="TypeScript" />&nbsp;&nbsp;
-        <img src="https://cdn.simpleicons.org/javascript/22d3ee" width="40" height="40" alt="JavaScript" />&nbsp;&nbsp;
-        <img src="https://cdn.simpleicons.org/react/22d3ee" width="40" height="40" alt="React" />
-        <br /><br />
-        <code>TypeScript · JavaScript · React</code><br /><img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/spacer.png?v=1" width="420" height="1" alt="" />
-      </td>
-      <td width="50%" valign="top">
-        <code>├─ 02 mobile</code><br /><br />
-        <img src="https://cdn.simpleicons.org/kotlin/22d3ee" width="40" height="40" alt="Kotlin" />&nbsp;&nbsp;
-        <img src="https://cdn.simpleicons.org/android/22d3ee" width="40" height="40" alt="Android" />
-        <br /><br />
-        <code>Kotlin · Android</code><br /><img src="https://raw.githubusercontent.com/saihroo/saihroo/main/assets/spacer.png?v=1" width="420" height="1" alt="" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>├─ 03 ai_automation</code><br /><br />
-        <img src="https://cdn.simpleicons.org/python/22d3ee" width="40" height="40" alt="Python" />&nbsp;&nbsp;
-        <img src="https://cdn.simpleicons.org/githubactions/22d3ee" width="40" height="40" alt="GitHub Actions" />
-        <br /><br />
-        <code>Python · AI · Automation</code>
-      </td>
-      <td valign="top">
-        <code>├─ 04 backend_data</code><br /><br />
-        <img src="https://cdn.simpleicons.org/dotnet/22d3ee" width="40" height="40" alt=".NET" />&nbsp;&nbsp;
-        <img src="https://cdn.simpleicons.org/mysql/22d3ee" width="40" height="40" alt="MySQL" />
-        <br /><br />
-        <code>C# · .NET · SQL</code>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>├─ 05 gamedev</code><br /><br />
-        <img src="https://cdn.simpleicons.org/roblox/22d3ee" width="40" height="40" alt="Roblox" />&nbsp;&nbsp;
-        <img src="https://cdn.simpleicons.org/lua/22d3ee" width="40" height="40" alt="Lua" />
-        <br /><br />
-        <code>Roblox · Luau</code>
-      </td>
-      <td valign="top">
-        <code>╰─ 06 tooling</code><br /><br />
-        <img src="https://cdn.simpleicons.org/git/22d3ee" width="40" height="40" alt="Git" />&nbsp;&nbsp;
-        <img src="https://cdn.simpleicons.org/github/22d3ee" width="40" height="40" alt="GitHub" />&nbsp;&nbsp;
-        <img src="https://cdn.simpleicons.org/linux/22d3ee" width="40" height="40" alt="Linux" />
-        <br /><br />
-        <code>Git · GitHub · Linux</code>
-      </td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="2"><code>status: online&nbsp;&nbsp;·&nbsp;&nbsp;mode: building&nbsp;&nbsp;·&nbsp;&nbsp;locale: en / es</code></td>
-    </tr>
-  </tfoot>
-</table>
-
-</div>
-
----
-
-## `$ gh stats --user saihroo`
+### `$ gh stats --user saihroo`
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=saihroo&amp;show_icons=true&amp;hide=stars,contribs&amp;hide_rank=true&amp;card_width=495&amp;bg_color=030711&amp;title_color=22d3ee&amp;icon_color=22d3ee&amp;text_color=cbd5e1&amp;border_color=155e75&amp;v=4" alt="saihroo's GitHub stats: commits, pull requests and issues" />
 </p>
 
-<p align="center"><sub><code>commits · pull requests · issues</code></sub></p>
-
----
-
-## `$ snake --contributions`
+### `$ snake --contributions`
 
 <p align="center">
   <picture>
@@ -120,16 +45,6 @@
   </picture>
 </p>
 
-<p align="center"><sub><code>contribution graph · snake loop</code></sub></p>
-
----
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/saihroo/saihroo/refs/heads/main/assets/chainsaw.webp?v=2" width="160" alt="Denji from Chainsaw Man in a looping pixel-art animation" />
-  <br />
-  <sub><code>idle loop · 0x1F</code></sub>
-</p>
-
-<p align="center">
-  <sub><code>
 </p>
